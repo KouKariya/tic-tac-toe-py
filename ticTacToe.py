@@ -3,6 +3,7 @@
 gameGrid = [ [' ' for i in range(3)] for j in range(3)]
 gameWon = False
 gameOver = False
+answer = str()
 
 def gameRules():
     print'Whoever matches three of a kind wins! Place either an X or an O within the grid'
@@ -14,23 +15,30 @@ def printGrid():
     print'-------'
     print'|'+gameGrid[2][0]+'|'+gameGrid[2][1]+'|'+gameGrid[2][2]+'|'
 
-def placeMove(move,index):
-    print move
-    x = move
+def placeMove():
+    global answer
+    global gameOver
     global gameGrid
+    ans = raw_input('Xs or Os?')
+    index = int(input('What position?'))
     count = 1
     for i in range(3):
         for j in range(3):
             if(count == index):
-                print move
-                gameGrid[i][j] = x
+                gameGrid[i][j] = ans
+                answer = ans
+                break
+            elif(count > 9):
+                gameOver = True
             else:
                 count = count + 1
+        #if(count == index): break #TEST
 
-#def gameWinner( ans ):
-    #for i in range(len(gameRow1)):
-        #if(ans == gameRow(0) and ans == gameRow(1) and ans == gameRow(2)):
-            #print'TEST is the winner'
+def gameWinner():
+    global gameWon
+    for i in range(3):
+        if(answer == gameGrid[i][0] and answer == gameGrid[i][1] and answer == gameGrid[i][2]):
+            print'TEST is the winner'
     
 
 def main():
@@ -38,15 +46,8 @@ def main():
     #printGrid()
     while(gameWon != True or gameOver != True):
         printGrid()
-        a = raw_input('Xs or Os?')
-        b = raw_input('Where?...')
-        placeMove(a,b)
-        gameGrid[2][2] = 'x' #TEST
-
-    #create this in function and make it global
+        placeMove()
+        gameWinner()
     
     
-    
-
-
 main()
