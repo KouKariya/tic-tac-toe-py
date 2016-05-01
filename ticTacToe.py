@@ -1,7 +1,7 @@
 #ticTacToe.py
+#by Jesse Gallarzo
 
-gameGrid = [ [' ' for i in range(3)] for j in range(3)]
-gameWon = False
+gameGrid = [[' ' for i in range(3)] for j in range(3)]
 gameOver = False
 answer = str()
 
@@ -19,35 +19,40 @@ def placeMove():
     global answer
     global gameOver
     global gameGrid
-    ans = raw_input('Xs or Os?')
-    index = int(input('What position?'))
+    ans = raw_input('Xs or Os? ')
+    index = int(input('What position? '))
     count = 1
     for i in range(3):
         for j in range(3):
-            if(count == index):
+            if count == index:
                 gameGrid[i][j] = ans
                 answer = ans
-                break
-            elif(count > 9):
-                gameOver = True
+                return
             else:
-                count = count + 1
-        #if(count == index): break #TEST
+                count += 1
 
 def gameWinner():
-    global gameWon
+    global gameOver
     for i in range(3):
-        if(answer == gameGrid[i][0] and answer == gameGrid[i][1] and answer == gameGrid[i][2]):
-            print'TEST is the winner'
-    
+        if answer == gameGrid[i][0] and answer == gameGrid[i][1] and answer == gameGrid[i][2]:
+            print answer + 's are the winner'
+            gameOver = True
+
+    for j in range(3):
+        if answer == gameGrid[0][j] and answer == gameGrid[1][j] and answer == gameGrid[2][j]:
+            print answer + 's are the winner'
+            gameOver = True
 
 def main():
     gameRules()
-    #printGrid()
-    while(gameWon != True or gameOver != True):
+    global gameOver
+    while gameOver != True:
         printGrid()
         placeMove()
         gameWinner()
+
+    printGrid()
+    print 'Game over...'
     
     
 main()
