@@ -6,7 +6,7 @@ gameOver = False
 answer = str()
 
 def gameRules():
-    print('Whoever matches three of a kind wins! Place either an X or an O within the grid')
+    print('Whoever matches three of a kind in a row or column wins! Place either an X or an O within the grid')
 
 def printGrid():
     print('|'+gameGrid[0][0]+'|'+gameGrid[0][1]+'|'+gameGrid[0][2]+'|')
