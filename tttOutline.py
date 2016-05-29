@@ -1,6 +1,7 @@
 #tttOutline.py
-#by Jesse Gallarzo
+#Written by Jesse Gallarzo
 #When working with this file, make sure that it is renamed as 'ticTacToe.py'
+#warning - renaming this file while in the same directory as the original ticTacToe program, may cause it to override it.
 
 #gameGrid
 #gameOver

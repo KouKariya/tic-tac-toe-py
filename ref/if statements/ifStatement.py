@@ -1,5 +1,5 @@
 #ifStatement.py
-#written by Jesse Gallarzo
+#Written by Jesse Gallarzo
 
 #The script prompts the user for their age.
 age = int(input('How old are you? '))

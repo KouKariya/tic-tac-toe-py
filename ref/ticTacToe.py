@@ -1,5 +1,5 @@
 #ticTacToe.py
-#by Jesse Gallarzo
+#Written by Jesse Gallarzo
 
 gameGrid = [[' ' for i in range(3)] for j in range(3)]
 gameOver = False
