@@ -14,5 +14,6 @@ y = '6'
 print(x+y)
 
 #The variable 'name' is prompting input from the user by asking what its name is.
+#The print statement below shows the concantenation of the user's name to the sentence 'Hello nice to meet you!'
 name = input('What is your name? ')
 print('Hello'+name+'nice to meet you!')
