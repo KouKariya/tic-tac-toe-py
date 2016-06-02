@@ -19,3 +19,10 @@ for num in range(5):
     else:
         print('I am sorry, you are still '+str(age)+ ' years old..')
         age += 1
+#This is an example of a while loop.
+#check spacing on IDE.
+while(age <= 17):
+  print('I am sorry, you are still '+str(age)+ ' years old..')
+
+
+print('You are all grown up now!')
