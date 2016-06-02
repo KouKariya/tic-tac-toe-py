@@ -20,9 +20,10 @@ for num in range(5):
         print('I am sorry, you are still '+str(age)+ ' years old..')
         age += 1
 #This is an example of a while loop.
-#check spacing on IDE.
+#So long as the age of the user is 17 or below, print out the print function underneath it.
 while(age <= 17):
-  print('I am sorry, you are still '+str(age)+ ' years old..')
+    print('I am sorry, you are still '+str(age)+ ' years old..')
+    age += 1 #Here we are incrementing the value of 'age' for every loop iteration
 
-
+#Once the value of age is greater than 17, the print function below is shown.
 print('You are all grown up now!')
