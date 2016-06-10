@@ -5,7 +5,6 @@
 
 def main():
     #Add code here
-    #Test
     print('Test')
 
 main()
