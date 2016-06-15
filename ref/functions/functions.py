@@ -3,7 +3,11 @@
 
 #Add code here
 
-#def function One:
+#def functionOne():
+
+#def functionTwo():
+
+#def functionThree():
 
 def main():
     #Add code here
