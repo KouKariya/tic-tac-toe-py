@@ -1,5 +1,6 @@
 #lists.py
 #Written by Jesse Gallarzo
+#run in Python3 otherwise change input to raw_input for python2
 
 listOfNames = []
 
