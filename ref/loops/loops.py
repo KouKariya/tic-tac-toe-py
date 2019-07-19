@@ -2,28 +2,35 @@
 #Written by Jesse Gallarzo
 
 #The script prompts the user for their age.
+#age is the integer variable used for the for loop
+#age2 is the integer variable used for the while loop
+#adult is the boolean variable used for the while loop 
 age = int(input('How old are you? '))
+age2 = age
+adult = False
 
-#the following line creates a for loop
-#for every value 'num' in range of 5 e.i. this for loop happens 5 times
-for num in range(5):
-    #Check to see if the value of age is greater than 17
-    #If it is, print the statement below and 'break' from the loop
-    if(age > 17):
-        print('You are all grown up now!')
-        break;
-    #Else, if the age variable is not high enough...
-    #print the statement below and increment the value of 'age' by 1
-    #str(age) converts the integer variable 'age' into a string in order to
-    #concantenate the value into our sentence.
-    else:
-        print('I am sorry, you are still '+str(age)+ ' years old..')
-        age += 1
+
+
+#This is an exampe of a for loop:
+#For every value between the age variable and 19, print your age.
+#Print contents of the 'else' statement once num reaches 18
+for num in range(age,19):
+	if(num <= 17):
+		print('I am sorry, you are still '+str(num)+ ' years old..')
+	else:
+		print('You are all grown up now!')
+		print('\n')
+
+
+
+        
 #This is an example of a while loop.
-#So long as the age of the user is 17 or below, print out the print function underneath it.
-while(age <= 17):
-    print('I am sorry, you are still '+str(age)+ ' years old..')
-    age += 1 #Here we are incrementing the value of 'age' for every loop iteration
-
-#Once the value of age is greater than 17, the print function below is shown.
+#So long as the adult variable is 'false', run the if-statement to check your age
+while(adult is False):
+	if(age2 <= 17):
+		print('I am sorry, you are still '+str(age2)+ ' years old..')
+		age2 += 1 #Here we are incrementing the value of the 'age2' variable for every loop iteration
+	else:
+		adult = True
+#Once the value of age2 is greater than 17, the adult variable becomes 'true' and breaks the for loop.
 print('You are all grown up now!')
