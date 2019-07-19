@@ -1,4 +1,4 @@
-#lists.my
+#lists.py
 #Written by Jesse Gallarzo
 #test
 #test
